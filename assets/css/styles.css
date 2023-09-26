@@ -1,0 +1,97 @@
+:root {
+  --background: 20 14.3% 4.1%;
+  --foreground: 60 9.1% 97.8%;
+  --card: 20 14.3% 4.1%;
+  --card-foreground: 60 9.1% 97.8%;
+  --popover: 20 14.3% 4.1%;
+  --popover-foreground: 60 9.1% 97.8%;
+  --primary: 47.9 95.8% 53.1%;
+  --primary-foreground: 26 83.3% 14.1%;
+  --secondary: 12 6.5% 15.1%;
+  --secondary-foreground: 60 9.1% 97.8%;
+  --muted: 12 6.5% 15.1%;
+  --muted-foreground: 24 5.4% 63.9%;
+  --accent: 12 6.5% 15.1%;
+  --accent-foreground: 60 9.1% 97.8%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 60 9.1% 97.8%;
+  --border: 12 6.5% 15.1%;
+  --input: 12 6.5% 15.1%;
+  --ring: 35.5 91.7% 32.9%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: hsla(var(--background));
+  color: hsla(var(--foreground));
+  font-family: "Montserrat", sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+}
+
+header h1 {
+  font-size: 1.5rem;
+}
+
+header nav {
+  display: flex;
+  gap: 1rem;
+  font-size: 1rem;
+}
+
+header nav a {
+  color: hsla(var(--muted-foreground));
+  text-decoration: none;
+  padding: 1rem 0;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+header nav a:hover {
+  color: hsla(var(--foreground));
+}
+
+header nav a.active {
+  color: hsla(var(--foreground));
+}
+
+hr {
+  background-color: hsla(var(--foreground));
+  border: 0;
+  margin: 0;
+  height: 1px;
+}
+
+main .highlights {
+  padding: 4rem;
+}
+
+main .img {
+  aspect-ratio: 6/2;
+  object-fit: cover;
+  background-color: hsla(var(--primary));
+  border-radius: 0.5rem;
+}
+
+.highlights h1 {
+  margin-bottom: 1.5rem;
+}
+
+.highlights .carousel-indicators button {
+  width: 20px;
+  height: 20px;
+  background-color: hsla(var(--muted-foreground));
+}
+
+.highlights .carousel-indicators button.active {
+  background-color: hsla(var(--foreground));
+}
