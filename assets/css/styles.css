@@ -86,6 +86,10 @@ main .title {
   margin-bottom: 1.5rem;
 }
 
+main .carousel {
+  min-width: 200px;
+}
+
 main .img {
   aspect-ratio: 2.5;
   object-fit: cover;
@@ -104,13 +108,14 @@ main .img {
 }
 
 .map iframe {
+  min-width: 200px;
   border-radius: 0.5rem;
   aspect-ratio: 2.5;
 }
 
 .albuns {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 2rem;
 }
 
@@ -145,6 +150,7 @@ main .img {
 @media (max-width: 768px) {
   main {
     gap: 2rem;
+    padding: 1.5rem;
   }
 
   main .title {
@@ -161,5 +167,9 @@ main .img {
 
   .map iframe {
     aspect-ratio: 2;
+  }
+
+  .albuns .album img {
+    /* aspect-ratio: 2/3; */
   }
 }
