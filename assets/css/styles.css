@@ -77,17 +77,20 @@ main {
   max-width: 1480px;
   margin: 0 auto;
   padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+main .title {
+  margin-bottom: 1.5rem;
 }
 
 main .img {
-  aspect-ratio: 6/2;
+  aspect-ratio: 2.5;
   object-fit: cover;
   background-color: hsla(var(--primary));
   border-radius: 0.5rem;
-}
-
-.highlights h1 {
-  margin-bottom: 1.5rem;
 }
 
 .highlights .carousel-indicators button {
@@ -100,15 +103,63 @@ main .img {
   background-color: hsla(var(--foreground));
 }
 
-.map {
-  margin-top: 4rem;
-}
-
-.map h1 {
-  margin-bottom: 1.5rem;
-}
-
 .map iframe {
   border-radius: 0.5rem;
-  aspect-ratio: 6/2;
+  aspect-ratio: 2.5;
+}
+
+.albuns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.albuns .album {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.album .album-info strong {
+  display: block;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.albuns .album img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  transition: 0.2s;
+}
+
+.albuns .album .img-wrapper {
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+
+.albuns .album img:hover {
+  scale: 1.05;
+}
+
+@media (max-width: 768px) {
+  main {
+    gap: 2rem;
+  }
+
+  main .title {
+    margin-bottom: 0.5rem;
+  }
+
+  main .img {
+    aspect-ratio: 2;
+  }
+
+  .map {
+    margin-top: 2rem;
+  }
+
+  .map iframe {
+    aspect-ratio: 2;
+  }
 }
