@@ -64,16 +64,28 @@ header .mobile-nav {
 }
 
 header .mobile-nav button {
+  border: none;
+  width: 40px;
+  height: 40px;
+  background: hsla(var(--muted));
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header .mobile-nav button::before {
+  content: "";
+  transition: 0.2s;
   width: 18px;
   height: 2px;
   background: hsla(var(--foreground));
-  border: none;
-  transition: 0.2s;
   box-shadow: 0 6px 0 0 hsla(var(--foreground)),
     0 -6px 0 0 hsla(var(--foreground));
+  display: block;
 }
 
-header .mobile-nav.open button {
+header .mobile-nav.open button::before {
   transform: rotate(90deg);
 }
 
@@ -83,7 +95,7 @@ header .mobile-nav nav {
   flex-direction: column;
   gap: 1rem;
   left: 0;
-  top: 30px;
+  top: 44px;
   background: hsla(var(--background));
   z-index: 100;
   border: 1px solid hsla(var(--border));
@@ -120,87 +132,6 @@ hr {
   border: 0;
   margin: 0;
   height: 1px;
-}
-
-main {
-  max-width: 1480px;
-  margin: 0 auto;
-  padding: 4rem;
-  display: flex;
-  flex-direction: column;
-  gap: 4rem;
-}
-
-main .title {
-  margin-bottom: 1.75rem;
-  font-weight: bold;
-  color: hsla(var(--primary));
-}
-
-main .carousel {
-  min-width: 250px;
-}
-
-main .img {
-  aspect-ratio: 2.5;
-  object-fit: cover;
-  background-color: hsla(var(--primary));
-  border-radius: 0.5rem;
-}
-
-.highlights .carousel-indicators button {
-  width: 10px;
-  height: 10px;
-  background-color: hsla(var(--muted-foreground));
-}
-
-.highlights .carousel-indicators button.active {
-  background-color: hsla(var(--foreground));
-}
-
-.map iframe {
-  min-width: 250px;
-  border-radius: 0.5rem;
-  aspect-ratio: 2.5;
-}
-
-.albuns {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-}
-
-.albuns .album {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.album .album-info strong {
-  display: block;
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.album .album-info span {
-  font-size: 0.875rem;
-  color: hsla(var(--muted-foreground));
-}
-
-.albuns .album img {
-  width: 100%;
-  aspect-ratio: 4/3;
-  object-fit: cover;
-  transition: 0.2s;
-}
-
-.albuns .album .img-wrapper {
-  overflow: hidden;
-  border-radius: 0.5rem;
-}
-
-.albuns .album img:hover {
-  scale: 1.05;
 }
 
 footer {
@@ -277,32 +208,6 @@ footer .info .student-info {
 
   header .mobile-nav {
     display: block;
-  }
-
-  main {
-    gap: 2rem;
-    padding: 1.5rem;
-  }
-
-  main .title {
-    margin-bottom: 0.5rem;
-    font-size: 1.5rem;
-  }
-
-  main .img {
-    aspect-ratio: 2;
-  }
-
-  .map {
-    margin-top: 2rem;
-  }
-
-  .map iframe {
-    aspect-ratio: 2;
-  }
-
-  .album .album-info strong {
-    font-size: 1.125rem;
   }
 
   footer {
