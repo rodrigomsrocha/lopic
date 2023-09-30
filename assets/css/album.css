@@ -1,0 +1,29 @@
+.album-info img {
+  max-width: 400px;
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+.album-info-wrapper {
+  display: flex;
+  gap: 1rem;
+}
+
+.album-info .info {
+  display: flex;
+  flex-direction: column;
+  color: hsla(var(--muted-foreground));
+}
+
+.album-info .info .more {
+  display: flex;
+  gap: 1rem;
+}
+
+.album-info .info strong {
+  color: hsla(var(--foreground));
+  font-size: 1.125rem;
+  display: block;
+}
