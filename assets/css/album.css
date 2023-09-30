@@ -53,10 +53,30 @@
   overflow: hidden;
   border-radius: 0.5rem;
   background-color: transparent;
+  width: 100%;
 }
 
 .gallery .gallery-item button:hover img {
   scale: 1.05;
+}
+
+.modal-header {
+  background-color: hsla(var(--background));
+}
+
+.modal-content .btn-close {
+  margin-left: auto;
+  background-color: hsla(var(--foreground));
+}
+
+.modal-content .carousel-indicators button {
+  width: 10px;
+  height: 10px;
+  background-color: hsla(var(--muted-foreground));
+}
+
+.modal-content .carousel-indicators button.active {
+  background-color: hsla(var(--foreground));
 }
 
 @media (max-width: 768px) {
