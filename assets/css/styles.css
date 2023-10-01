@@ -165,6 +165,7 @@ footer strong {
 
 footer .about p {
   max-width: 600px;
+  color: hsla(var(--muted-foreground));
 }
 
 footer .info {
