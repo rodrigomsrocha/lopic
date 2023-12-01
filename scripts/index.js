@@ -12,7 +12,7 @@ async function getData() {
           <div class="popup-map">
             <header>
               <h3>
-                <a href="${album.url}" target="_blank">${album.title}</a>
+                <a href="${album.url}">${album.title}</a>
               </h3>
               <span>${album.date}<span>
             </header>

@@ -26,10 +26,6 @@ main .img {
   width: 100%;
 }
 
-#map .mapboxgl-popup-tip {
-  border-top-color: hsla(var(--background)) !important;
-}
-
 #map .mapboxgl-popup-content {
   background-color: hsla(var(--background)) !important;
 }
@@ -43,6 +39,7 @@ main .img {
 
 #map .popup-map header h3 a {
   color: hsla(var(--primary)) !important;
+  text-decoration: underline;
 }
 
 #map .popup-map header h3 span {
@@ -111,12 +108,12 @@ main .img {
     aspect-ratio: 2;
   }
 
-  .map {
+  #map {
     margin-top: 2rem;
   }
 
-  .map iframe {
-    aspect-ratio: 2;
+  #map {
+    aspect-ratio: 1/2;
   }
 
   .album .album-info strong {
