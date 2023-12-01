@@ -1,13 +1,17 @@
 const mobileNav = document.querySelector(".mobile-nav");
 const navBtn = document.querySelector(".nav-btn");
 
+const albunsContainer = document.querySelector(".albuns");
+
 window.addEventListener("load", getData);
 
 async function getData() {
-  const res = await fetch("https://lopic-server.rodrigomsrocha.repl.co/albuns");
-  const data = await res.json();
+  const albunsRes = await fetch(
+    "https://lopic-server.rodrigomsrocha.repl.co/albuns"
+  );
+  const albuns = await albunsRes.json();
 
-  data.forEach((album) => {
+  albuns.forEach((album) => {
     let popup = new mapboxgl.Popup({ offset: 25 }).setHTML(`
           <div class="popup-map">
             <header>
@@ -19,10 +23,24 @@ async function getData() {
             <img src="${album.highlight}" />
           </div>
         `);
-    const marker = new mapboxgl.Marker({ color: "#84e" })
+    const marker = new mapboxgl.Marker({ color: "#09090b" })
       .setLngLat(album.loc)
       .setPopup(popup)
       .addTo(map);
+
+    albunsContainer.innerHTML += `
+      <div class="album">
+        <a href=${album.url} class="img-wrapper">
+          <img src=${album.highlight} alt=${album.title} />
+        </a>
+        <div class="album-info">
+          <strong>${album.title}</strong>
+          <span>
+            ${album.description}
+          </span>
+        </div>
+      </div>
+    `;
   });
 }
 
