@@ -47,7 +47,7 @@ async function getData() {
 const centralLatLong = [-3.70379, 40.416775];
 
 mapboxgl.accessToken =
-  "pk.eyJ1Ijoicm9kcmlnbzIxMDciLCJhIjoiY2xwbGp1emZsMDBzdTJqbWx6ZGI1bnlycCJ9.G1Swubdn_EFSMlM-Q86GsA";
+  "pk.eyJ1Ijoicm9kcmlnbzIxMDciLCJhIjoiY2tnN2VqZnd3MDJ4NDJ0czV2dm82dnEyaSJ9.rO8ou1SfpFi5Q9UHI8fl0Q";
 const map = new mapboxgl.Map({
   container: "map",
   style: "mapbox://styles/mapbox/streets-v12",
